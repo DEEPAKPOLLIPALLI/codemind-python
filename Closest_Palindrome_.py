@@ -1,30 +1,28 @@
-def pal(n):
-    rev=temp=r=0
-    temp=n
-    while n>0:
-        r=n%10
-        rev=rev*10+r
-        n=n//10
-    if(temp==rev):
-        return 1
-    else:
-        return 0
-n=int(input())
-rev=s=a=r=v=0
-for i in range(n+1,10000):
-    if(pal(i)==1):
-        s=i
-        v=i-n
+def rev(a):
+    s=0
+    while a>0:
+        rem=a%10
+        s=(s*10)+rem
+        a//=10
+    return s
+a=int(input())
+p1=0
+p2=0
+d1=0
+d2=0
+for i in range(a-1,0,-1):
+    if rev(i)==i:
+        p1=i
+        d1=a-i
         break
-for j in range(n-1,0,-1):
-    if(pal(j)==1):
-        r=j
-        a=n-j
+for i in range(a+1,10000):
+    if rev(i)==i:
+        p2=i
+        d2=i-a
         break
-if(v>a):
-    print(r)
-elif(v==a):
-    print(r,s)
-else:
-    print(s)
-    
+if d1==d2:
+    print(p1,p2)
+elif d1>d2:
+    print(p2)
+elif d1<d2:
+    print(p1)
