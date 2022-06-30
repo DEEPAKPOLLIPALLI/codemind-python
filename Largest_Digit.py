@@ -1,9 +1,8 @@
 n=int(input())
-s=0
-while n>0 :
+l=0
+while n:
     r=n%10
-    if r>s :
-        s=r
-    n=n//10
-print(s)
-
+    n//=10
+    if l<r:
+        l=r
+print(l)
