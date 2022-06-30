@@ -1,12 +1,9 @@
 a=int(input())
 fa=0
 fb=1
-fn=0
-fib=[]
+n=0
 for i in range(a):
-    fib.append(fa)
-    fn=fa+fb
+    print(fa,end=" ")
+    n=fa+fb
     fa=fb
-    fb=fn
-for i in range(a):
-    print(fib[i],end=" ")
+    fb=n
