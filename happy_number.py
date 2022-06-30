@@ -1,16 +1,15 @@
-n=int(input())
-r=b=c=0
-while n>0:
-    r=n%10
-    b+=pow(r,2)
-    n=n//10
-    if(n==0):
-        if(b>0 and b<=9):
-            break
-        else:
-            n=b
-            b=0
-if(b==1 or b==7):
-    print(True)
-else:
-    print(False)
+def Happy(n):    
+    rem=sum=0;    
+    while(n>0):    
+        rem=n%10;    
+        sum=sum+(rem*rem);    
+        n=n//10;    
+    return sum;    
+n=int(input())   
+temp=n    
+while(temp!=1 and temp!=4):    
+    temp=Happy(temp);    
+if(temp==1):    
+    print("True")   
+elif(temp==4):    
+    print("False")
