@@ -1,9 +1,10 @@
-n=int(input())
-a=0
-for i in range(1,n//2,1):
-    if(i*(i+1)==n):
-        a=a+1
-if(a>0):
+a=int(input())
+c=0
+for i in range(a):
+    if i*(i+1)==a:
+        c=1
+        break
+if c==1:
     print("YES")
 else:
     print("NO")
