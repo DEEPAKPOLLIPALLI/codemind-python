@@ -1,8 +1,13 @@
-a,b=map(int,input().split())
-s=list(map(int,input().strip().split()))
-d=list(map(int,input().strip().split()))
-k=[]
-for i in s:
-  if i in d:
-      k.append(i)
-print(len(set(k)))
+m,n=map(int,input().split())
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+a=set(a)
+b=set(b)
+c=[]
+for i in a:
+    if i in b:
+        c.append(i)
+for j in b:
+    if j in a:
+        c.append(j)
+print(len(c)//2)
